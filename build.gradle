@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.kate.addressbook'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.14.1'
+    testImplementation "junit:junit:4.13.2"
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
