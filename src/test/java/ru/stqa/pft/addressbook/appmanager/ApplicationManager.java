@@ -13,7 +13,7 @@ import java.util.Map;
 public class ApplicationManager {
     public WebDriver driver;
     private  NavigationHelper navigationHelper;
-    private GroupHelper groupHelper;
+    public GroupHelper groupHelper;
     JavascriptExecutor js;
 
     private SessionHelper SessionHelper;
