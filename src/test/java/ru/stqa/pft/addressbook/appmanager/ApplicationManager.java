@@ -1,13 +1,11 @@
 package ru.stqa.pft.addressbook.appmanager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class ApplicationManager {
@@ -16,16 +14,24 @@ public class ApplicationManager {
     public GroupHelper groupHelper;
     JavascriptExecutor js;
 
-    private SessionHelper SessionHelper;
 
-    public void init() {
-        groupHelper.driver = new ChromeDriver();
-        js = (JavascriptExecutor) groupHelper.driver;
-        Map<String, Object> vars = new HashMap<String, Object>();
-        groupHelper = new GroupHelper(driver);
-        NavigationHelper NavigationHelper = new NavigationHelper(driver);
-        SessionHelper = new SessionHelper(driver);
-    }
+    private SessionHelper sessionHelper;
+
+//    public void init() {
+//        groupHelper.driver = new ChromeDriver();
+//        js = (JavascriptExecutor) groupHelper.driver;
+//        NavigationHelper navigationHelper = new NavigationHelper(driver);
+//        sessionHelper = new SessionHelper(driver);
+//
+//
+//    }
+public void init() {
+    driver = new ChromeDriver();
+    js = (JavascriptExecutor) driver;
+    navigationHelper = new NavigationHelper(driver); 
+    sessionHelper = new SessionHelper(driver);
+}
+
 
     public void stop() {
         driver.quit();
@@ -33,8 +39,9 @@ public class ApplicationManager {
 
     @Test
     public void testCase() {
+        init();
         driver.get("http://localhost/addressbook/index.php");
-        SessionHelper.login("admin", "secret");
+        sessionHelper.login("admin", "secret");
     }
 
 
