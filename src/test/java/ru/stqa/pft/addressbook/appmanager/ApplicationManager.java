@@ -5,6 +5,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v116.tracing.model.TracingBackend;
+import org.openqa.selenium.remote.Browser;
 import org.testng.annotations.Test;
 
 
@@ -26,10 +28,13 @@ public class ApplicationManager {
 //
 //    }
 public void init() {
+    Browser BrowserType = null;
+    String browser = String.valueOf(BrowserType.CHROME);
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
-    navigationHelper = new NavigationHelper(driver); 
+    navigationHelper = new NavigationHelper(driver);
     sessionHelper = new SessionHelper(driver);
+    groupHelper = new GroupHelper(driver);
 }
 
 
@@ -37,9 +42,7 @@ public void init() {
         driver.quit();
     }
 
-    @Test
-    public void testCase() {
-        init();
+    public void authentication() {
         driver.get("http://localhost/addressbook/index.php");
         sessionHelper.login("admin", "secret");
     }
