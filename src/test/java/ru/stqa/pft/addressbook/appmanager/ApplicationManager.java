@@ -66,4 +66,8 @@ public void init() {
         driver.findElement(By.name("pass")).sendKeys(password);
         driver.findElement(By.cssSelector("input:nth-child(7)")).click();
     }
+
+    public ContactHelper getContactHelper() {
+        return null;
+    }
 }
