@@ -5,9 +5,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v116.tracing.model.TracingBackend;
 import org.openqa.selenium.remote.Browser;
-import org.testng.annotations.Test;
 
 
 public class ApplicationManager {
@@ -19,14 +17,6 @@ public class ApplicationManager {
 
     private SessionHelper sessionHelper;
 
-//    public void init() {
-//        groupHelper.driver = new ChromeDriver();
-//        js = (JavascriptExecutor) groupHelper.driver;
-//        NavigationHelper navigationHelper = new NavigationHelper(driver);
-//        sessionHelper = new SessionHelper(driver);
-//
-//
-//    }
 public void init() {
     Browser BrowserType = null;
     String browser = String.valueOf(BrowserType.CHROME);
@@ -41,12 +31,10 @@ public void init() {
     public void stop() {
         driver.quit();
     }
-
     public void authentication() {
         driver.get("http://localhost/addressbook/index.php");
         sessionHelper.login("admin", "secret");
     }
-
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
@@ -68,6 +56,6 @@ public void init() {
     }
 
     public ContactHelper getContactHelper() {
-        return null;
+        return new ContactHelper(driver);
     }
 }

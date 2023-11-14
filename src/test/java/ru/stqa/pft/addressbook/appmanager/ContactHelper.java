@@ -20,24 +20,24 @@ public class ContactHelper extends HelperBase {
         type(By.name("lastname"), contactData.getLastName());
 
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(ContactData.getGroup());
         } else {
-            Assert.assertFalse(isElementPresent(By.name("new_group"));
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
     }
-        public void SubmitContactCreation () {
-            click(By.name("submit"));
-        }
-        public void returnToHomePage () {
-            click(By.name("home"));
-        }
-        public void initContactModification () {
-            click(By.cssSelector(".odd > .center:nth-child(8) img"));
-        }
-
-        public void submitContactModification () {
-            click(By.name("update"));
-        }
+    public void returnToHomePage() {
+        click(By.linkText("home"));
     }
 
+    public void initContactModification() {
+        click(By.cssSelector(".odd > .center:nth-child(8) img"));
+    }
+
+    public void submitContactModification() {
+        click(By.name("update"));
+    }
+
+    public void submitContactCreation() {
+        click(By.name("submit"));
+    }
 }

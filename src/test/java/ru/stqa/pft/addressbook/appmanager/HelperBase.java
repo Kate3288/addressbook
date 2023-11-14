@@ -18,7 +18,7 @@ public class HelperBase {
         driver.findElement(locator).click();
     }
 
-    public boolean type(By locator, String text) {
+    public void type(By locator, String text) {
         click(locator);
         if (text != null) {
             String existingText = driver.findElement(locator).getAttribute("value");
@@ -27,28 +27,29 @@ public class HelperBase {
                 driver.findElement(locator).sendKeys(text);
             }
         }
-        return false;
     }
 
-            public boolean isAlertPresent() {
-                try {
-                    driver.switchTo().alert();
-                    return true;
-                } catch (NoAlertPresentException e) {
-                    return false;
-                }
-            }
-
-    public void initContactCreation() {
+    public boolean isAlertPresent() {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
     }
 
     protected boolean isElementPresent(By locator) {
         try {
             driver.findElement(locator);
             return true;
-        } catch (NoSuchElementException) {
-           return false;
+        } catch (NoSuchElementException ex) {
+            return false;
         }
     }
+
+    public void initContactModification() {
+        click(By.xpath("//img[@title='Edit']"));
+    }
 }
+
 

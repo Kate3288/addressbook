@@ -32,7 +32,7 @@ public class GroupHelper extends HelperBase {
         click(By.name("edit"));
     }
 
-    public void submitgroupModification() {
+    public void submitGroupModification() {
         click(By.name("update"));
     }
 }

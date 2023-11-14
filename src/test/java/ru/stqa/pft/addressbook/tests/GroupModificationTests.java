@@ -12,7 +12,7 @@ public class GroupModificationTests extends TestBase {
         app.getGroupHelper().driver.findElement(By.name("selected[]")).click();
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new GroupData("Test 1", "Test 2", "Test 3"));
-        app.getGroupHelper().submitgroupModification();
+        app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToGroupPage();
     }
 

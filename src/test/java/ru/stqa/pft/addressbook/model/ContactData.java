@@ -1,20 +1,25 @@
 package ru.stqa.pft.addressbook.model;
 
 public class ContactData {
-    private final String firstname;
-    private final String secondname;
-    private String group;
+    private final String firstName;
+    private final String secondName;
+    private static String group;
 
-    public ContactData(String firstname, String secondname, String group) {
-        this.firstname = firstname;
-        this.secondname = secondname;
-        this.group = group;
+    public ContactData(String firstName, String secondName, String Group) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        group = Group;
     }
-    public String getFirstName() {return firstname; }
-    public String getLastName () {return secondname; }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
-    public String getGroup() {
+    public String getLastName() {
+        return secondName;
+    }
+
+    public static String getGroup() {
         return group;
     }
 }
