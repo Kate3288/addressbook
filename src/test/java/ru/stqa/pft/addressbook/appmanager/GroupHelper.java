@@ -35,4 +35,23 @@ public class GroupHelper extends HelperBase {
     public void submitGroupModification() {
         click(By.name("update"));
     }
+
+    public void selectGroup() {
+        driver.findElement(By.name("selected[]")).click();
+    }
+    public void deleteSelectedGroup() {
+       driver.findElement(By.cssSelector("input[name='delete']")).click();
+
+    }
+
+    public boolean IsThereAGroup() {
+         return isElementPresent(By.name("selected[]"));
+    }
+
+    public void createGroup(GroupData group) {
+       initGroupCreation();
+       fillGroupForm(group);
+       submitGroupCreation();
+       returnToGroupPage();
+    }
 }

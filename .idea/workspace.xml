@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55f7fd25-44c4-4598-8bcc-b6d5a2035da8" name="Changes" comment="">
+    <list default="true" id="55f7fd25-44c4-4598-8bcc-b6d5a2035da8" name="Changes" comment="Checking and implementing preconditions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupDeletionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,7 @@
       <recent name="com.kate.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GroupDeletionTest">
+  <component name="RunManager" selected="Gradle.GroupModificationTests">
     <configuration name="ContactCreationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GroupDeletionTest" />
-        <item itemvalue="Gradle.ContactModificationTest" />
-        <item itemvalue="Gradle.ContactCreationTest" />
-        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupModificationTests" />
+        <item itemvalue="Gradle.GroupDeletionTest" />
+        <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Gradle.ContactCreationTest" />
+        <item itemvalue="Gradle.ContactModificationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700054312656</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" &#10;All tests passed successfully including the GroupCreationTest:)">
+      <created>1700055591181</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700055591181</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,20 +318,12 @@
     <MESSAGE value="Added an authentication method" />
     <MESSAGE value="Finished the 3rd block&#10;All tests pass successfully :)" />
     <MESSAGE value=" &#10;All tests passed successfully including the GroupCreationTest:)" />
-    <option name="LAST_COMMIT_MESSAGE" value=" &#10;All tests passed successfully including the GroupCreationTest:)" />
+    <MESSAGE value="Checking and implementing preconditions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checking and implementing preconditions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java</url>
-          <line>34</line>
-          <properties class="ru.stqa.pft.addressbook.appmanager.GroupHelper" method="submitGroupModification">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java</url>
           <line>11</line>
