@@ -49,7 +49,7 @@ public void init() {
     }
 
     public void login(String username, String password) {
-        driver.manage().window().setSize(new Dimension(1342, 868));
+        driver.findElement(By.name("pass")).sendKeys(password);
         driver.findElement(By.name("user")).sendKeys(username);
         driver.findElement(By.name("pass")).sendKeys(password);
         driver.findElement(By.cssSelector("input:nth-child(7)")).click();
