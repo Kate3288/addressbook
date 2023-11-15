@@ -14,13 +14,13 @@ public class GroupDeletionTest extends TestBase {
     }
 
     public void goToGroupPage () {
-        app.getGroupHelper().driver.findElement(By.linkText("group page")).click();
-    }
-
-    private void deleteSelectedGroup() {
-        app.getGroupHelper().driver.findElement(By.cssSelector("input:nth-child(16)")).click();
+        app.getGroupHelper().driver.findElement(By.linkText("groups")).click();
     }
     private void selectGroup() {
         app.getGroupHelper().driver.findElement(By.name("selected[]")).click();
+    }
+    private void deleteSelectedGroup() {
+        app.getGroupHelper().driver.findElement(By.cssSelector("input[name='delete']")).click(); //By.cssSelector("input[name='delete']")
+
     }
 }
