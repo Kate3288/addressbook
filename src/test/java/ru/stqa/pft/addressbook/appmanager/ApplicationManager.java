@@ -44,9 +44,7 @@ public void init() {
         return navigationHelper;
     }
 
-    public void goToGroupPage() {
-        navigationHelper.goToGroupPage();
-    }
+
 
     public void login(String username, String password) {
         driver.findElement(By.name("pass")).sendKeys(password);
